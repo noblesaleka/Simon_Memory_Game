@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simon</title>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    
 
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -46,20 +46,26 @@
         </div>
         
         <div class="container center gameholder">
-            <div class="gamebox yellow"></div>
-            <div class="gamebox green"></div>
-            <div class="gamebox red"></div>
-            <div class="gamebox blue"></div>
+            <div id= "yellow" class="gamebox yellow"></div>
+            <div id ="green" class="gamebox green"></div>
+            <div id="red" class="gamebox red"></div>
+            <div id="blue" class="gamebox blue"></div>
        <!-- </div>
 
         <div class="container center">-->
-            <div class="control concert"><h2>Play</h2></div>
-            <div class="control concert"><h2>Pause</h2></div>
-            <div class="control concert"><h2>Quit</h2></div>
+            <div id="play" class="control concert"><h2>Play</h2></div>
+            <div id="pause" class="control concert"><h2>Pause</h2></div>
+            <div id="quit" class="control concert"><h2>ON/OFF</h2></div>
+            
+            <div class="scorebox black concert"><h3>LEVEL</h3></div>
+            <div id="level" class="scorebox black concert"><h3>--</h3></div>
+            
         </div>
 
 
 
+<!--Javascript-->
+<script type="text/javascript" src="assets/js/main.js"></script>
 
 
 </body>

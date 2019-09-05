@@ -17,19 +17,28 @@ body {
 
 .yellow {
     background-color: yellow;
+    border: black solid 5px;
 }
 
 .green {
     background-color: green;
+    border: black solid 5px;
 }
 
 .red {
     background-color: red;
+    border: black solid 5px;
 }
 
 .blue {
     background-color: blue;
+    border: black solid 5px;
 }
+
+.black {
+    background-color: black;
+}
+
 /*game parts*/
 
 .gameholder {
@@ -54,4 +63,13 @@ body {
     display: inline-block;
     margin-top: 10px;
     border: black solid 5px;
+}
+
+.scorebox {
+    height: 50px;
+    width: 100px;
+    border-radius: 20%;
+    display: inline-block;
+    margin-top: 10px;
+    color: red;
 }
