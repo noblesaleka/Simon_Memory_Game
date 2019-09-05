@@ -39,6 +39,14 @@ body {
     background-color: black;
 }
 
+.redtext{
+    color: red;
+}
+
+.blacktext{
+    color: black;
+}
+
 /*game parts*/
 
 .gameholder {
@@ -71,5 +79,4 @@ body {
     border-radius: 20%;
     display: inline-block;
     margin-top: 10px;
-    color: red;
 }

@@ -18,8 +18,23 @@ const play = document.querySelector("#play");
 const pause = document.querySelector("#pause");
 const quit = document.querySelector("#quit");
 const levelCounter = document.querySelector("#level");
+const scorebox = document.querySelector("#scorebox");
 
 //turn on game
-document.getElementById("quit").addEventListener("click", function() {
-    console.log("it works");
+quit.addEventListener("click", function(){
+    if (scorebox.classList.contains("blacktext") == true ) {
+        scorebox.classList.remove("blacktext");
+        scorebox.classList.add("redtext");
+        levelCounter.classList.remove("blacktext");
+        levelCounter.classList.add("redtext");
+        console.log("hi");
+    }
+    else {
+        scorebox.classList.remove("redtext");
+        scorebox.classList.add("blacktext");
+        levelCounter.classList.remove("redtext");
+        levelCounter.classList.add("blacktext");
+        console.log("no");
+    };
 });
+    
