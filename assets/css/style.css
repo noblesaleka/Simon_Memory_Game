@@ -39,6 +39,10 @@ body {
     background-color: black;
 }
 
+.white {
+    background-color: white !important;
+}
+
 .redtext{
     color: red;
 }
