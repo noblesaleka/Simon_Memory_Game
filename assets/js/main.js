@@ -1,6 +1,7 @@
-let compOrder = []; //order of lights flashing
+let randomArray = []; //random array 
+var compOrder = []; // combination of lights played by computer
 let playerOrder = []; //order of player input
-var id, color, level = 0;
+var id, color, level = 0, j = 0, i, k;
 var sound = [
     "assets/audio/Baby Sneeze-SoundBible.com-431839106.mp3",
     "assets/audio/Banana Peel Slip-SoundBible.com-580403617.mp3",
@@ -52,39 +53,90 @@ quit.addEventListener("click", function(){
 
 //when play button is pressed game should begin
 play.addEventListener("click", function(){
-    level++;
     newgame();
 });
 
-//what level am i on?
+
+//reset game
 function newgame() {
-    //clear compOrder array-- to be added
-    levelCounter.innerHTML = "<h3>" + level+ "</h3>";
+    getRandomNumber();
+    level++;
+    levelCounter.innerHTML = "<h3>" + level + "</h3>";
     console.log("You are on level " + level);
     
+    for (k=0; k<level; k++) {
+    iterate();
+    }
+    $("h1").css("color", "blue");
     
-    getRandomNumber();
-    console.log("The random number generated is " + getRandomNumber());
-    id = getRandomNumber();
-    console.log("The id generated is " + id);
+
+   
+   
+   
+    }
     
-    };
+    
+    
     
 //randomize number, push random number into order array. math.random will select
 // a random decimal, multiply it by 4 and round down so we get 0 to 3
- //add 1 since 0 can never be an option, and number must be able to reach a value of 4 
 function getRandomNumber() {
+    for(i=0; i<20; i++) {
     var random = (Math.floor(Math.random() * 4));
-        compOrder.push(random);
-    };
+        randomArray.push(random);
+    }
+    console.log("These are the random numbers generated" + randomArray);
+};
+
+
+
+
     
-function flash (color) {
-    color.classList.remove("yellow");
-    color.classList.add("white");
-    setTimeout(function() {
-        color.classList.remove("white");
-        color.classList.add("yellow");
-    }, 250)
+//iterate through randomArray, if user is on level 1, the iteration should occur once.
+//if user is on level 3, the iteration should occur 3 times, etc
+function iterate() {
+    if (randomArray[j] == 0) {
+        //style box like this then timeout
+        $("#yellow").addClass("white");
+        compOrder.push(0);
+        
+            setTimeout(function() {
+                $("#yellow").removeClass("white"); 
+            }, 1000)
+    }
     
+    
+    
+    else if (randomArray[j] == 1) {
+         $("#green").addClass("white");
+        compOrder.push(0);compOrder.push(1);
+        
+         setTimeout(function() {
+                $("#green").removeClass("white"); 
+            }, 1000)
+    }
+    
+    else if (randomArray[j] == 2) {
+         $("#red").addClass("white");
+         setTimeout(function() {
+                $("#red").removeClass("white"); 
+            }, 1000)
+        
+        compOrder.push(2);
+    }
+
+    else if (randomArray[j] == 3) {
+        $("#blue").addClass("white");
+        setTimeout(function() {
+                $("#blue").removeClass("white"); 
+            }, 1000)
+       
+        compOrder.push(3);
+    }
+    
+    j++;
+    console.log(compOrder)
 }
+    
+    
 
