@@ -5,14 +5,6 @@ var level = 0,
     j = 0,
     i, k, m;
 
-var sound = [
-    "assets/audio/Baby Sneeze-SoundBible.com-431839106.mp3",
-    "assets/audio/Banana Peel Slip-SoundBible.com-580403617.mp3",
-    "assets/audio/service-bell_daniel_simion.mp3",
-    "assets/audio/Sharp Punch-SoundBible.com-1947392621.mp3"
-]
-
-
 //buttons that user can interact with
 const yellowBox = document.querySelector("#yellow");
 const greenBox = document.querySelector("#green");
@@ -32,7 +24,6 @@ quit.addEventListener("click", function() {
         levelCounter.classList.remove("blacktext");
         levelCounter.classList.add("redtext");
         console.log("hi");
-        on = true;
         levelCounter.innerHTML = "<h3>--</h3>";
     }
     else {
@@ -41,7 +32,6 @@ quit.addEventListener("click", function() {
         levelCounter.classList.remove("redtext");
         levelCounter.classList.add("blacktext");
         console.log("no");
-        on = false;
     };
 });
 
@@ -72,6 +62,11 @@ function getRandomNumber(level) {
 };
 
 
+
+
+
+
+
 //iterate through randomArray
 function iterate() {
     
@@ -80,18 +75,16 @@ function iterate() {
             //style box like this then timeout
             $("#yellow").addClass("white");
             compOrder.push(0);
-
+            $("#yellowSound")[0].play();
             setTimeout(function() {
                 $("#yellow").removeClass("white");
             }, 250)
         }
 
-
-
         else if (randomArray[j] == 1) {
             $("#green").addClass("white");
             compOrder.push(1);
-
+            $("#greenSound")[0].play();
             setTimeout(function() {
                 $("#green").removeClass("white");
             }, 250)
@@ -99,20 +92,21 @@ function iterate() {
 
         else if (randomArray[j] == 2) {
             $("#red").addClass("white");
+            compOrder.push(2);
+            $("#redSound")[0].play();
             setTimeout(function() {
                 $("#red").removeClass("white");
             }, 250)
-
-            compOrder.push(2);
+           
         }
 
         else if (randomArray[j] == 3) {
             $("#blue").addClass("white");
+             compOrder.push(3);
+             $("#blueSound")[0].play();
             setTimeout(function() {
                 $("#blue").removeClass("white");
             }, 250)
-
-            compOrder.push(3);
         }
 
         j++;
@@ -128,36 +122,40 @@ function iterate() {
 $("#yellow").on("click", function() {
     playerOrder.push(0);
     $("#yellow").addClass("white");
+    $("#yellowSound")[0].play();
     setTimeout(function() {
         $("#yellow").removeClass("white");
-    }, 250)
+    }, 300)
     compare();
 })
 
 $("#green").on("click", function() {
     playerOrder.push(1);
     $("#green").addClass("white");
+    $("#greenSound")[0].play();
     setTimeout(function() {
         $("#green").removeClass("white");
-    }, 250)
+    }, 300)
     compare();
 })
 
 $("#red").on("click", function() {
     playerOrder.push(2);
     $("#red").addClass("white");
+    $("#redSound")[0].play();
     setTimeout(function() {
         $("#red").removeClass("white");
-    }, 250)
+    }, 300)
     compare();
 })
 
 $("#blue").on("click", function() {
     playerOrder.push(3);
     $("#blue").addClass("white");
+     $("#blueSound")[0].play();
     setTimeout(function() {
         $("#blue").removeClass("white");
-    }, 250)
+    }, 300)
     compare();
 })
 
@@ -171,7 +169,7 @@ function compare() {
         //join values in computer's array 
         //join values in user's array
         //if both numbers are the same, user has passed level
-        if (compOrder.join == playerOrder.join) {
+        if (compOrder.join() == playerOrder.join()) {
 
             if (level <= 3) {
                 setTimeout(function() {
@@ -206,8 +204,6 @@ function compare() {
 }
 
 //reset game
-
-
 $("#reset").on("click", function() {
     randomArray = []; 
     compOrder = []; 
