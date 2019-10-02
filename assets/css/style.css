@@ -1,39 +1,72 @@
 body { 
-    background-color: #f542e0;
+   background-color: #f542e0;
+   font-family: 'Concert One', cursive; 
     
 }
 
-/*Google Fonts*/
-.concert {
+/*--------------------------------------------Google Fonts*/
+.concert-font {
     font-family: 'Concert One', cursive;
 }
 
 
-/*Formatting*/
+/*----------------------------------------------Formatting*/
 
 .center {
     text-align: center;
 }
 
-.yellow {
-    background-color: yellow;
+.uppercase {
+    text-transform: uppercase;
+}
+
+.one {
+    background-color: #FF3A20;
     border: black solid 5px;
 }
 
-.green {
-    background-color: green;
+.two {
+    background-color: #FF4365;
     border: black solid 5px;
 }
 
-.red {
-    background-color: red;
+.three {
+    background-color: #FFBE0B;
     border: black solid 5px;
 }
 
-.blue {
-    background-color: blue;
+.four {
+    background-color: #3A86FF;
     border: black solid 5px;
 }
+
+.five {
+    background-color: #8338EC;
+    border: black solid 5px;
+}
+
+.six {
+    background-color: #FF6B6B;
+    border: black solid 5px;
+}
+
+.seven {
+    background-color: #99C24D;
+    border: black solid 5px;
+}
+
+.eight {
+    background-color: #4ECDC4;
+    border: black solid 5px;
+}
+
+.nine {
+    background-color: #1A535C;
+    border: black solid 5px;
+}
+
+
+
 
 .black {
     background-color: black;
@@ -52,12 +85,13 @@ body {
     color: black;
 }
 
-/*game parts*/
+/*------------------------------------------------------game parts*/
 
 .gameholder {
     margin-top: 30px;
     border: black solid 3px;
     padding: 10px;
+    width: 400px;
 }
 .gamebox {
     height: 100px;
@@ -84,4 +118,30 @@ body {
     border-radius: 20%;
     display: inline-block;
     margin-top: 10px;
+}
+
+.smallcircle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+.settings {
+    position: absolute;
+/*    top: 100px; left: 100px*/;
+    background: white;
+    border: black solid 5px;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.speeddown {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
 }
