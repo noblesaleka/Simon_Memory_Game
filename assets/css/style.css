@@ -121,8 +121,8 @@ body {
 }
 
 .smallcircle {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     display: inline-block;
     margin: 10px 15px;
@@ -144,4 +144,23 @@ body {
     width: 50px;
     border-radius: 50%;
     background-color: red;
+    display: inline-block;
 }
+
+.speedup {
+     height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+     display: inline-block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+
+/*.hide {
+    display: none;
+}
+*/

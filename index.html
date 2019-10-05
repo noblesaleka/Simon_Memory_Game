@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simon</title>
-  
+
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
@@ -19,21 +19,21 @@
 
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
-    
+
     <!--style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
-      <!--font awesome-->
+
+    <!--font awesome-->
     <script src="https://use.fontawesome.com/8662d5c490.js"></script>
 
 
 </head>
 
 <body>
-    
-    
+
+
     <!--Audio Clips-->
-     <audio id="yellowSound">
+    <audio id="yellowSound">
       <source src ="assets/audio/yellow.mp3">
     </audio>
 
@@ -48,7 +48,7 @@
     <audio id="redSound">
         <source src="assets/audio/red.mp3">
     </audio>
-    
+
     <audio id="levelUpSound">
         <source src="assets/audio/levelup.mp3">
     </audio>
@@ -63,69 +63,96 @@
                 <h1 class="concert-font">Simon</h1>
             </div>
         </div>
-        
+
         <div class="container center gameholder">
-            <div id= "one" class="gamebox one concert-font"><h2>1</h2></div>
-            <div id ="two" class="gamebox two concert-font"><h2>2</h2></div>
-            <div id="three" class="gamebox three concert-font"><h2>3</h2></div>
-            <div id="four" class="gamebox four concert-font"><h2>4</h2></div>
-            <div id="five" class="gamebox five concert-font"><h2>5</h2></div>
-            <div id="six" class="gamebox six concert-font"><h2>6</h2></div>
-            <div id="seven" class="gamebox seven concert-font"><h2>7</h2></div>
-            <div id="eight" class="gamebox eight concert-font"><h2>8</h2></div>
-            <div id="nine" class="gamebox nine concert-font"><h2>9</h2></div>
-       <!-- </div>
+            <div id="one" class="gamebox one concert-font">
+                <h2>1</h2>
+            </div>
+            <div id="two" class="gamebox two concert-font">
+                <h2>2</h2>
+            </div>
+            <div id="three" class="gamebox three concert-font">
+                <h2>3</h2>
+            </div>
+            <div id="four" class="gamebox four concert-font">
+                <h2>4</h2>
+            </div>
+            <div id="five" class="gamebox five concert-font">
+                <h2>5</h2>
+            </div>
+            <div id="six" class="gamebox six concert-font">
+                <h2>6</h2>
+            </div>
+            <div id="seven" class="gamebox seven concert-font">
+                <h2>7</h2>
+            </div>
+            <div id="eight" class="gamebox eight concert-font">
+                <h2>8</h2>
+            </div>
+            <div id="nine" class="gamebox nine concert-font">
+                <h2>9</h2>
+            </div>
+            <!-- </div>
 
         <div class="container center">-->
-            <div id="play" class="control concert-font"><h2>Play<i class="fas fa-play"></i></h2></div>
-            <div id="reset" class="control concert-font"><h2>Reset</h2></div>
-            <div id="quit" class="control concert-font"><h2>ON/OFF</h2></div>
-            
-            <div id="settings" class="smallcircle black concert-font blacktext"><h3>--</h3></div>
-            <div id="scorebox" class="scorebox black concert-font blacktext"><h3>LEVEL</h3></div>
-            <div id="level" class="scorebox black concert-font blacktext"><h3>--</h3></div>
-            
-            <div id="rules" class="smallcircle black concert-font blacktext"><h3>--</h3></div>
+            <div id="play" class="control concert-font">
+                <h2>Play<i class="fas fa-play"></i></h2>
+            </div>
+            <div id="reset" class="control concert-font">
+                <h2>Reset</h2>
+            </div>
+            <div id="quit" class="control concert-font">
+                <h2>ON/OFF</h2>
+            </div>
+
+            <div id="settingButton" class="smallcircle black concert-font blacktext">
+                <h3>--</h3>
+            </div>
+            <div id="scorebox" class="scorebox black concert-font blacktext">
+                <h3>LEVEL</h3>
+            </div>
+            <div id="level" class="scorebox black concert-font blacktext">
+                <h3>--</h3>
+            </div>
+
+            <div id="rules" class="smallcircle black concert-font blacktext">
+                <h3>--</h3>
+            </div>
         </div>
-        
+
         <div class="container center settings">
-            <div class="">
-                <h3 class ="concert-font">Settings</h3>
-                <h4 class ="concert-font">Speed</h4>
-                    <div id="speeddown" class="speeddown concert-font"><</div>
-                    <div id="speed" class="concert-font uppercase">easy</div>
-                    <div id="speedup" class="speedup concert-font">></div>
-                
-                <h4 class ="concert-font">Sound</h4>
-                    <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="soundSwitch">
-                      <label class="custom-control-label" for="soundSwitch">OFF/ON</label>
-                    </div>
-                
-                <h4 class ="concert-font">Style</h4>
-                    <div class="down"><</div>
-                    <div class="easy">ORIGINAL</div>
-                    <div class="med">BLACK & WHITE</div>
-                    <div class="up">></div>
+            <div id="settings" class = "hide">
+                <h3 class="concert-font">Settings</h3>
+                <h4 class="concert-font">Speed</h4>
+                <div id="speeddown" class="speeddown concert-font">
+                    <</div>
+                        <div id="speed" class="concert-font uppercase inline-block">easy</div>
+                        <div id="speedup" class="speedup concert-font">></div>
+
+                        <h4 class="concert-font">Sound</h4>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="soundSwitch">
+                            <label class="custom-control-label" for="soundSwitch">OFF/ON</label>
+                        </div>
+                </div>
+
+                <div id="rules" class ="hide">
+                    <h3 class="concert-font">How to Play</h3>
+                    <ol>
+                        <li>Press the play button, a series of numbered box(es) will flash.</li>
+                        <li>After the numbered box(es) have finished flashing, it is your turn to replicate the pattern.</li>
+                        <li>If you have correctly replicated the pattern you will move on to the next level.</li>
+                        <li>If you didn't replicate the pattern you loose, and the game will end.</li>
+                        <li>To play again, simply press the "Reset" buton.</li>
+                    </ol>
+                </div>
+
             </div>
-            
-            <div class="rules">
-                <h3 class ="concert-font">How to Play</h3>
-                <ol>
-                    <li>Press the play button, a series of numbered box(es) will flash.</li>
-                    <li>After the numbered box(es) have finished flashing, it is your turn to replicate the pattern.</li>
-                    <li>If you have correctly replicated the pattern you will move on to the next level.</li>
-                    <li>If you didn't replicate the pattern you loose, and the game will end.</li>
-                    <li>To play again, simply press the "Reset" buton.</li>
-                </ol>
-            </div>
-            
-        </div>
 
 
 
-<!--Javascript-->
-<script type="text/javascript" src="assets/js/main.js"></script>
+            <!--Javascript-->
+            <script type="text/javascript" src="assets/js/main.js"></script>
 
 
 </body>

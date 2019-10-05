@@ -408,7 +408,6 @@ function compare() {
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
-                 
             }
         }
         
@@ -487,3 +486,7 @@ $("#soundSwitch").on("click", function() {
         
     }
 });
+ //setting button
+ $("#settingButton").on("click", function() {
+    $("#settings").removeClass("hide");
+    });

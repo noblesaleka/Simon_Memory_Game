@@ -9,9 +9,7 @@ If you enjoy a challenge, this game is for you.
 The Simon game is meant to be an interactive game that uses numbers and colors to challenge the user's memory.
 This game is built in the mobile first approach, large numbers and bright inviting colors are implemented
 to make this game visually appealing and easy to play. 
-On larger screened devices (desktop), the user has the option to play the game with their keyboard. 
-This way the user is not limited to with mouse clicks, which can be cumbersome.
-The 
+ 
 
 Use this section to provide insight into your UX process, focusing on who this website is for, 
 what it is that they want to achieve and how your project is the best way to help them achieve 
