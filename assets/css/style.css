@@ -4,6 +4,11 @@ body {
     
 }
 
+h1 {
+    padding: 10px;
+    margin: 30px;
+}
+
 /*--------------------------------------------Google Fonts*/
 .concert-font {
     font-family: 'Concert One', cursive;
@@ -14,6 +19,13 @@ body {
 
 .center {
     text-align: center;
+    
+}
+
+.centerNumber {
+    text-align: center;
+    line-height:80px;
+     
 }
 
 .uppercase {

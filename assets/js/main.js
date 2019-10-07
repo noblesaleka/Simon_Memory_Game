@@ -3,7 +3,7 @@ var compOrder = []; // combination of lights played by computer
 let playerOrder = []; //order of player input
 var level = 0,
     j = 0,
-    i, k, m;
+    i, k = 0, m;
 
   
 
@@ -39,6 +39,9 @@ quit.addEventListener("click", function() {
         levelCounter.classList.add("redtext");
         console.log("hi");
         levelCounter.innerHTML = "<h3>--</h3>";
+        k = 1; 
+        console.log("game is on" + k);
+        //game is on
     }
     else {
         scorebox.classList.remove("redtext");
@@ -46,14 +49,22 @@ quit.addEventListener("click", function() {
         levelCounter.classList.remove("redtext");
         levelCounter.classList.add("blacktext");
         console.log("no");
+        k = 0; // game is off
     }
 });
 
-//when play button is pressed game should begin
+//when play button is pressed game should begin if game is on
 play.addEventListener("click", function() {
-    newgame();
+    console.log(k);
+    if (k == 1) {
+        newgame();
+    }   else {
+            console.log("game is off");
+            play.removeEventListener("click", function() {
+                newgame();
+            });
+    }
 });
-
 
 //reset game
 function newgame() {
@@ -78,21 +89,19 @@ function getRandomNumber(level) {
 
 //iterate through randomArray
 function iterate() {
-    
-var gameLevel = $('#speed').text(); 
+    var gameLevel = $('#speed').text(); 
 
-if (gameLevel == "easy") {
-    var time = 1000;
-}
-else if (gameLevel == "medium") {
-    var time = 500;
-}
-    
-else {
-    var time = 250;
-} 
+    if (gameLevel == "easy") {
+        var time = 1000;
+    }
+    else if (gameLevel == "medium") {
+        var time = 500;
+    }
+    else {
+        var time = 250;
+    } 
 
-console.log(time);
+    console.log(time);
     
     m = setInterval(function() {
         if (randomArray[j] == 0) {
@@ -236,38 +245,48 @@ console.log(time);
 
 //user play, each button click will add a number to the playerOrder array
 $("#one").on("click", function() {
-    playerOrder.push(0);
-    $("#one").addClass("white");
-    if ($('#soundSwitch').prop("checked")) 
-                {
-                    console.log ("sound on"); 
-                    $("#yellowSound")[0].play();
-                    $("#yellowSound").currentTime = 0;
-                }
-    
-    setTimeout(function() {
-        $("#one").removeClass("white");
-    }, 300);
-    compare();
+    if (k == 1) {
+        playerOrder.push(0);
+        $("#one").addClass("white");
+        if ($('#soundSwitch').prop("checked")) 
+                    {
+                        console.log ("sound on"); 
+                        $("#yellowSound")[0].play();
+                        $("#yellowSound").currentTime = 0;
+                    }
+        
+        setTimeout(function() {
+            $("#one").removeClass("white");
+        }, 300);
+        compare();
+        }
+    else {
+        console.log("the game is off");
+    }
 });
 
 $("#two").on("click", function() {
-    playerOrder.push(1);
-    $("#two").addClass("white");
-    if ($('#soundSwitch').prop("checked")) 
+    if (k == 1) {
+        playerOrder.push(1);
+        $("#two").addClass("white");
+        if ($('#soundSwitch').prop("checked")) 
                 {
                     console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
-    setTimeout(function() {
+        setTimeout(function() {
         $("#two").removeClass("white");
     }, 300);
     compare();
+    } else {
+        console.log("the game is off")
+    }
 });
 
 $("#three").on("click", function() {
-    playerOrder.push(2);
+    if (k == 1) {
+         playerOrder.push(2);
     $("#three").addClass("white");
     if ($('#soundSwitch').prop("checked")) 
                 {
@@ -279,10 +298,15 @@ $("#three").on("click", function() {
         $("#three").removeClass("white");
     }, 300);
     compare();
+    } 
+    else {
+        console.log("the game is off");
+    }
 });
 
 $("#four").on("click", function() {
-    playerOrder.push(3);
+    if (k == 1) {
+        playerOrder.push(3);
     $("#four").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
@@ -294,10 +318,15 @@ $("#four").on("click", function() {
         $("#four").removeClass("white");
     }, 300);
     compare();
+    }
+    else {
+        console.log("the game is off");
+    }
 });
 
 $("#five").on("click", function() {
-    playerOrder.push(4);
+    if (k == 1) {
+        playerOrder.push(4);
     $("#five").addClass("white");
     if ($('#soundSwitch').prop("checked")) 
                 {
@@ -309,10 +338,16 @@ $("#five").on("click", function() {
         $("#five").removeClass("white");
     }, 300);
     compare();
+    }
+    else {
+        console.log("the game is off");
+    }
+    
 });
 
 $("#six").on("click", function() {
-    playerOrder.push(5);
+    if (k == 1) {
+        playerOrder.push(5);
     $("#six").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
@@ -324,10 +359,16 @@ $("#six").on("click", function() {
         $("#six").removeClass("white");
     }, 300);
     compare();
+    }
+    else {
+        console.log("the game is off");
+    }
+    
 });
 
 $("#seven").on("click", function() {
-    playerOrder.push(6);
+    if (k == 1) {
+        playerOrder.push(6);
     $("#seven").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
@@ -339,10 +380,16 @@ $("#seven").on("click", function() {
         $("#seven").removeClass("white");
     }, 300);
     compare();
+    }
+    else {
+        console.log("the game is off");
+    }
+    
 });
 
 $("#eight").on("click", function() {
-    playerOrder.push(7);
+    if (k == 1) {
+         playerOrder.push(7);
     $("#eight").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
@@ -354,10 +401,16 @@ $("#eight").on("click", function() {
         $("#eight").removeClass("white");
     }, 300);
     compare();
+    }
+    else {
+        console.log("the game is off");
+    }
+   
 });
 
 $("#nine").on("click", function() {
-    playerOrder.push(8);
+    if (k == 1) {
+        playerOrder.push(8);
     $("#nine").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
@@ -369,6 +422,11 @@ $("#nine").on("click", function() {
         $("#nine").removeClass("white");
     }, 300);
     compare();
+    }
+    else {
+        console.log("the game is off");
+    }
+    
 });
 
 
@@ -426,16 +484,21 @@ function compare() {
 
 //reset game
 $("#reset").on("click", function() {
-    randomArray = []; 
+    if (k == 1) {
+        randomArray = []; 
     compOrder = []; 
     playerOrder = []; 
     level = 0;
     j = 0;
     i = 0;
-    k = 0;
+    k = 1;
     m = 0;
     $(scorebox).html("<h3>" + "LEVEL" + "</h3>");
     $(levelCounter).html("<h3>" + "--" + "</h3>");
+    }
+    else {
+        console.log("the game is off");
+    }
 });
 
 //Game settings
