@@ -96,7 +96,7 @@
 
         <div class="container center">-->
             <div id="play" class="control concert-font">
-                <h2>Play<i class="fas fa-play"></i></h2>
+                <h2>Play</h2>
             </div>
             <div id="reset" class="control concert-font">
                 <h2>Reset</h2>
@@ -105,49 +105,63 @@
                 <h2>ON/OFF</h2>
             </div>
 
-            <div id="settingButton" class="smallcircle black concert-font blacktext">
-                <h3>--</h3>
-            </div>
+            <div class="levelHolder">
             <div id="scorebox" class="scorebox black concert-font blacktext">
                 <h3>LEVEL</h3>
             </div>
             <div id="level" class="scorebox black concert-font blacktext">
                 <h3>--</h3>
             </div>
+            </div>
 
-            <div id="rules" class="smallcircle black concert-font blacktext">
-                <h3>--</h3>
+
+            <div class="settingHolder">
+            <div id="settingButton" class="smallcircle concert-font centerText">
+                S
+            </div>
+            <div id="rules" class=" smallcircle concert-font centerText">
+               R
+            </div>
+           
             </div>
         </div>
 
-        <div class="container center settings">
-            <div id="settings" class = "hide">
+ 
+
+
+        <div class="container center settings noDisplay" id = "settingBox">
+            <div id="settings">
+                
                 <h3 class="concert-font">Settings</h3>
                 <h4 class="concert-font">Speed</h4>
-                <div id="speeddown" class="speeddown concert-font">
+                <div id="speeddown" class="concert-font smallcircle">
                     <</div>
                         <div id="speed" class="concert-font uppercase inline-block">easy</div>
-                        <div id="speedup" class="speedup concert-font">></div>
+                        <div id="speedup" class="concert-font smallcircle">></div>
 
                         <h4 class="concert-font">Sound</h4>
                         <div class="custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="soundSwitch">
                             <label class="custom-control-label" for="soundSwitch">OFF/ON</label>
                         </div>
+                        <button type="button" class = "uppercase closeSettings" id = "closeSettings">Close</button>
                 </div>
-
-                <div id="rules" class ="hide">
+         </div>
+         
+         <div class="instructions noDisplay" id = "ruleBox">
+                <div id="rules" >
                     <h3 class="concert-font">How to Play</h3>
-                    <ol>
+                    <ol class = "left">
                         <li>Press the play button, a series of numbered box(es) will flash.</li>
                         <li>After the numbered box(es) have finished flashing, it is your turn to replicate the pattern.</li>
                         <li>If you have correctly replicated the pattern you will move on to the next level.</li>
                         <li>If you didn't replicate the pattern you loose, and the game will end.</li>
                         <li>To play again, simply press the "Reset" buton.</li>
                     </ol>
+                    <button type="button" class = "uppercase closeSettings" id = "closeRules">Close</button>
                 </div>
-
-            </div>
+        </div>
+           
 
 
 

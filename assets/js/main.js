@@ -473,7 +473,13 @@ function compare() {
             console.log("you loose");
             $(scorebox).html("<h3>" + "YOU" + "</h3>");
             $(levelCounter).html("<h3>" + "LOOSE!" + "</h3>");
-            $("#loose")[0].play();
+            if ($('#soundSwitch').prop("checked")) 
+                {
+                    console.log ("sound on"); 
+                    $("#loose")[0].play();
+                    $("#yellowSound").currentTime = 0;
+                }
+            
         }
         
         level++;
@@ -549,7 +555,27 @@ $("#soundSwitch").on("click", function() {
         
     }
 });
- //setting button
+
+ //setting button open
  $("#settingButton").on("click", function() {
-    $("#settings").removeClass("hide");
+     console.log("i was clicked");
+    $("#settingBox").removeClass("noDisplay");
+    });
+    
+//close settings
+$("#closeSettings").on("click", function() {
+     console.log("i was clicked");
+    $("#settingBox").addClass("noDisplay");
+    });
+    
+//rule button open
+ $("#rules").on("click", function() {
+     console.log("i was clicked");
+    $("#ruleBox").removeClass("noDisplay");
+    });
+    
+//close rule
+$("#closeRules").on("click", function() {
+     console.log("i was clicked");
+    $("#ruleBox").addClass("noDisplay");
     });
