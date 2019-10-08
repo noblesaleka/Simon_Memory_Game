@@ -1,11 +1,8 @@
 let randomArray = []; //random array 
 var compOrder = []; // combination of lights played by computer
 let playerOrder = []; //order of player input
-var level = 0,
-    j = 0,
-    i, k = 0, m;
-
-  
+var level = 0;
+var j = 0, i, k = 0, m;
 
 //buttons that user can interact with
 const oneBox = document.querySelector("#one");
@@ -556,7 +553,7 @@ $("#soundSwitch").on("click", function() {
     }
 });
 
- //setting button open
+//setting button open
  $("#settingButton").on("click", function() {
      console.log("i was clicked");
     $("#settingBox").removeClass("noDisplay");

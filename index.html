@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
--->
+    
     <!--jQuery CDN-->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
@@ -22,154 +20,139 @@
 
     <!--style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <!--font awesome-->
-    <script src="https://use.fontawesome.com/8662d5c490.js"></script>
-
-
 </head>
 
 <body>
-<div class="container center">
+    <div class="container center">
 
-    <!--Audio Clips-->
-    <audio id="yellowSound">
-      <source src ="assets/audio/yellow.mp3">
-    </audio>
-
-    <audio id="greenSound">
-        <source src="assets/audio/green.mp3">
-    </audio>
-
-    <audio id="blueSound">
-        <source src="assets/audio/blue.mp3">
-    </audio>
-
-    <audio id="redSound">
-        <source src="assets/audio/red.mp3">
-    </audio>
-
-    <audio id="levelUpSound">
-        <source src="assets/audio/levelup.mp3">
-    </audio>
-
-    <audio id="loose">
+    <!------------------------------------------------------------Audio Clips-->
+        <audio id="yellowSound">
+        <source src ="assets/audio/yellow.mp3">
+        </audio>
+    
+        <audio id="loose">
         <source src="assets/audio/loose.mp3">
-    </audio>
+        </audio>
+    <!--------------------------------------------------------Audio Clips END-->
 
-    <div class="container">
-        <div class="row center">
-            <div class="col-12">
-                <h1 class="concert-font">Simon</h1>
-            </div>
-        </div>
-
-        <div class="container center gameholder">
-            <div id="one" class="gamebox one concert-font center">
-                <h2 class = "centerNumber">1</h2>
-            </div>
-            <div id="two" class="gamebox two concert-font ">
-                <h2 class = "centerNumber">2</h2>
-            </div>
-            <div id="three" class="gamebox three concert-font">
-                <h2 class = "centerNumber">3</h2>
-            </div>
-            <div id="four" class="gamebox four concert-font">
-                <h2 class = "centerNumber">4</h2>
-            </div>
-            <div id="five" class="gamebox five concert-font">
-                <h2 class = "centerNumber">5</h2>
-            </div>
-            <div id="six" class="gamebox six concert-font">
-                <h2 class = "centerNumber">6</h2>
-            </div>
-            <div id="seven" class="gamebox seven concert-font">
-                <h2 class = "centerNumber">7</h2>
-            </div>
-            <div id="eight" class="gamebox eight concert-font">
-                <h2 class = "centerNumber">8</h2>
-            </div>
-            <div id="nine" class="gamebox nine concert-font">
-                <h2 class = "centerNumber">9</h2>
-            </div>
-            <!-- </div>
-
-        <div class="container center">-->
-            <div id="play" class="control concert-font centerText">
-                <h2>Play</h2>
-            </div>
-            <div id="reset" class="control concert-font centerText">
-                <h2>Reset</h2>
-            </div>
-            <div id="quit" class="control concert-font centerText">
-                <h2>ON/OFF</h2>
-            </div>
-
-            <div class="levelHolder">
-            <div id="scorebox" class="scorebox black concert-font blacktext">
-                <h3>LEVEL</h3>
-            </div>
-            <div id="level" class="scorebox black concert-font blacktext">
-                <h3>--</h3>
-            </div>
-            </div>
-
-
-            <div class="settingHolder">
-            <div id="settingButton" class="smallcircle concert-font centerText">
-                S
-            </div>
-            <div id="rules" class=" smallcircle concert-font centerText">
-               R
-            </div>
-           
-            </div>
-        </div>
-
- 
-
-
-        <div class="container center settings noDisplay" id = "settingBox">
-            <div id="settings">
-                
-                <h3 class="concert-font">Settings</h3>
-                <h4 class="concert-font">Speed</h4>
-                <div id="speeddown" class="concert-font smallcircle">
-                    <</div>
-                        <div id="speed" class="concert-font uppercase inline-block">easy</div>
-                        <div id="speedup" class="concert-font smallcircle">></div>
-
-                        <h4 class="concert-font">Sound</h4>
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="soundSwitch">
-                            <label class="custom-control-label" for="soundSwitch">OFF/ON</label>
-                        </div>
-                        <button type="button" class = "uppercase closeSettings" id = "closeSettings">Close</button>
+    <!-------------------------------------------------------------Game start-->
+        <div class="container">
+    
+    <!------------------------------------------------------------------Title-->
+            <div class="row center">
+                <div class="col-12">
+                    <h1 class="concert-font">Simon</h1>
                 </div>
-         </div>
-         
-         
-         <div class=" container instructions noDisplay center" id = "ruleBox">
-                <div id="rules" >
+            </div>
+
+
+            <div class="container center gameholder">
+    <!-------------------------------------------------------------Number Pad-->
+                <div id="one" class="gamebox one concert-font center">
+                    <h2 class="centerNumber">1</h2>
+                </div>
+                
+                <div id="two" class="gamebox two concert-font ">
+                    <h2 class="centerNumber">2</h2>
+                </div>
+                
+                <div id="three" class="gamebox three concert-font">
+                    <h2 class="centerNumber">3</h2>
+                </div>
+                
+                <div id="four" class="gamebox four concert-font">
+                    <h2 class="centerNumber">4</h2>
+                </div>
+                
+                <div id="five" class="gamebox five concert-font">
+                    <h2 class="centerNumber">5</h2>
+                </div>
+                
+                <div id="six" class="gamebox six concert-font">
+                    <h2 class="centerNumber">6</h2>
+                </div>
+                
+                <div id="seven" class="gamebox seven concert-font">
+                    <h2 class="centerNumber">7</h2>
+                </div>
+                
+                <div id="eight" class="gamebox eight concert-font">
+                    <h2 class="centerNumber">8</h2>
+                </div>
+                
+                <div id="nine" class="gamebox nine concert-font">
+                    <h2 class="centerNumber">9</h2>
+                </div>
+
+    <!--------------------------------------------Control buttons and display-->
+                <div class="container center">
+                <div id="play" class="control concert-font centerText">
+                    <h2>Play</h2>
+                </div>
+                
+                <div id="reset" class="control concert-font centerText">
+                    <h2>Reset</h2>
+                </div>
+                
+                <div id="quit" class="control concert-font centerText">
+                    <h2>ON/OFF</h2>
+                </div>
+
+                <div class="levelHolder">
+                    <div id="scorebox" class="scorebox black concert-font blacktext">
+                        <h3>LEVEL</h3>
+                    </div>
+                    
+                    <div id="level" class="scorebox black concert-font blacktext">
+                        <h3>--</h3>
+                    </div>
+                </div>
+
+                <div class="settingHolder">
+                    <div id="settingButton" class="smallcircle concert-font centerText">
+                        S
+                    </div>
+                    <div id="rules" class=" smallcircle concert-font centerText">
+                        R
+                    </div>
+                </div>
+            </div>
+
+    <!---------------------------------------------------------Setting Window-->
+                <div class="container center settings noDisplay" id="settingBox">
+                <div id="settings">
+                    <h3 class="concert-font">Settings</h3>
+                    <h4 class="concert-font">Speed</h4>
+                    <div id="speeddown" class="concert-font smallcircle"><</div>
+                    <div id="speed" class="concert-font uppercase inline-block">easy</div>
+                    <div id="speedup" class="concert-font smallcircle">></div>
+                    <h4 class="concert-font">Sound</h4>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="soundSwitch">
+                        <label class="custom-control-label" for="soundSwitch">OFF/ON</label>
+                    </div>
+                    <button type="button" class="uppercase closeSettings" id="closeSettings">Close</button>
+                </div>
+            </div>
+
+    <!------------------------------------------------------------Rule Window-->
+                <div class="container instructions noDisplay center" id="ruleBox">
+                <div>
                     <h3 class="concert-font">How to Play</h3>
-                    <ol class = "left">
+                    <ol class="left">
                         <li>Press the play button, a series of numbered box(es) will flash.</li>
                         <li>After the numbered box(es) have finished flashing, it is your turn to replicate the pattern.</li>
                         <li>If you have correctly replicated the pattern you will move on to the next level.</li>
                         <li>If you didn't replicate the pattern you loose, and the game will end.</li>
                         <li>To play again, simply press the "Reset" buton.</li>
                     </ol>
-                    <button type="button" class = "uppercase closeSettings" id = "closeRules">Close</button>
+                    <button type="button" class="uppercase closeSettings" id="closeRules">Close</button>
                 </div>
-        </div>
-           
-
-
-
-            <!--Javascript-->
-            <script type="text/javascript" src="assets/js/main.js"></script>
-
-</div>
+            </div>
+            </div>
+    <!---------------------------------------------------------Game start END-->
+        </div> 
 </body>
-
+    <!-------------------------------------------------------------Javascript-->
+                <script type="text/javascript" src="assets/js/main.js"></script>
 </html>
