@@ -34,10 +34,8 @@ quit.addEventListener("click", function() {
         scorebox.classList.add("redtext");
         levelCounter.classList.remove("blacktext");
         levelCounter.classList.add("redtext");
-        console.log("hi");
         levelCounter.innerHTML = "<h3>--</h3>";
         k = 1; 
-        console.log("game is on" + k);
         //game is on
     }
     else {
@@ -45,18 +43,15 @@ quit.addEventListener("click", function() {
         scorebox.classList.add("blacktext");
         levelCounter.classList.remove("redtext");
         levelCounter.classList.add("blacktext");
-        console.log("no");
         k = 0; // game is off
     }
 });
 
 //when play button is pressed game should begin if game is on
 play.addEventListener("click", function() {
-    console.log(k);
     if (k == 1) {
         newgame();
     }   else {
-            console.log("game is off");
             play.removeEventListener("click", function() {
                 newgame();
             });
@@ -68,7 +63,6 @@ function newgame() {
     level++;
     getRandomNumber(level);
     levelCounter.innerHTML = "<h3>" + level + "</h3>";
-    console.log("You are on level " + level);
     iterate();
 }
 
@@ -80,7 +74,6 @@ function getRandomNumber(level) {
         var random = (Math.floor(Math.random() * 9));
         randomArray.push(random);
     }
-    console.log("These are the random numbers generated " + randomArray);
 }
 
 
@@ -98,8 +91,7 @@ function iterate() {
         var time = 250;
     } 
 
-    console.log(time);
-    
+
     m = setInterval(function() {
         if (randomArray[j] == 0) {
             //style box like this then timeout
@@ -107,7 +99,6 @@ function iterate() {
             compOrder.push(0);
              if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -123,7 +114,6 @@ function iterate() {
             compOrder.push(1);
             if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -137,7 +127,6 @@ function iterate() {
             compOrder.push(2);
             if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -152,7 +141,6 @@ function iterate() {
              compOrder.push(3);
              if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -166,7 +154,6 @@ function iterate() {
              compOrder.push(4);
             if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -180,7 +167,6 @@ function iterate() {
              compOrder.push(5);
              if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -194,7 +180,6 @@ function iterate() {
              compOrder.push(6);
             if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -208,7 +193,6 @@ function iterate() {
              compOrder.push(7);
             if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -222,7 +206,7 @@ function iterate() {
              compOrder.push(8);
             if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
+                     ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -232,8 +216,7 @@ function iterate() {
         }
         
         j++;
-        console.log(compOrder);
-
+        
         if (j > level) {
             clearInterval(m);
         }
@@ -247,7 +230,6 @@ $("#one").on("click", function() {
         $("#one").addClass("white");
         if ($('#soundSwitch').prop("checked")) 
                     {
-                        console.log ("sound on"); 
                         $("#yellowSound")[0].play();
                         $("#yellowSound").currentTime = 0;
                     }
@@ -268,7 +250,6 @@ $("#two").on("click", function() {
         $("#two").addClass("white");
         if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -287,7 +268,6 @@ $("#three").on("click", function() {
     $("#three").addClass("white");
     if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -307,7 +287,6 @@ $("#four").on("click", function() {
     $("#four").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -327,7 +306,6 @@ $("#five").on("click", function() {
     $("#five").addClass("white");
     if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -348,7 +326,6 @@ $("#six").on("click", function() {
     $("#six").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -369,7 +346,6 @@ $("#seven").on("click", function() {
     $("#seven").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -390,7 +366,6 @@ $("#eight").on("click", function() {
     $("#eight").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -411,7 +386,6 @@ $("#nine").on("click", function() {
     $("#nine").addClass("white");
      if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -442,7 +416,6 @@ function compare() {
 
             if (level <= 3) {
                 setTimeout(function() {
-                    console.log("not at level 10 yet, keep playing");
                     $(levelCounter).html("<h3>" + level + "</h3>");
                     compOrder = [];
                     playerOrder = [];
@@ -454,12 +427,10 @@ function compare() {
             }
 
             else {
-                console.log("you win");
                  $(scorebox).html("<h3>" + "YOU" + "</h3>");
                  $(levelCounter).html("<h3>" + "WIN!" + "</h3>");
                 if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#yellowSound")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -467,12 +438,10 @@ function compare() {
         }
         
         else {
-            console.log("you loose");
             $(scorebox).html("<h3>" + "YOU" + "</h3>");
             $(levelCounter).html("<h3>" + "LOOSE!" + "</h3>");
             if ($('#soundSwitch').prop("checked")) 
                 {
-                    console.log ("sound on"); 
                     $("#loose")[0].play();
                     $("#yellowSound").currentTime = 0;
                 }
@@ -480,8 +449,6 @@ function compare() {
         }
         
         level++;
-        console.log(level);
-
     }
 }
 
@@ -508,18 +475,14 @@ $("#reset").on("click", function() {
 //Game Speed control
 $("#speeddown").on("click", function() {
     var gameLevel = $('#speed').text();
-    console.log(gameLevel);
-    
+
     if (gameLevel == "easy") {
-        console.log("easy");
          $('#speed').text("hard");
        
    } else if (gameLevel == "hard") {
-       console.log("hard");
         $('#speed').text("medium");
    }
    else {
-       console.log("medium");
        $('#speed').text("easy");
    }
 });
@@ -527,19 +490,14 @@ $("#speeddown").on("click", function() {
 //Game Speed control
 $("#speedup").on("click", function() {
 var gameLevel = $('#speed').text();
-    console.log(gameLevel);
-    
-    
+
     if (gameLevel == "easy") {
-        console.log("easy");
          $('#speed').text("medium");
        
    } else if (gameLevel == "hard") {
-       console.log("hard");
         $('#speed').text("easy");
    }
    else {
-       console.log("medium");
        $('#speed').text("hard");
    }
 });
@@ -549,30 +507,25 @@ $("#soundSwitch").on("click", function() {
     if ($('#soundSwitch').prop("checked")) 
     {
         console.log ("sound on"); 
-        
     }
 });
 
 //setting button open
  $("#settingButton").on("click", function() {
-     console.log("i was clicked");
     $("#settingBox").removeClass("noDisplay");
     });
     
 //close settings
 $("#closeSettings").on("click", function() {
-     console.log("i was clicked");
     $("#settingBox").addClass("noDisplay");
     });
     
 //rule button open
  $("#rules").on("click", function() {
-     console.log("i was clicked");
     $("#ruleBox").removeClass("noDisplay");
     });
     
 //close rule
 $("#closeRules").on("click", function() {
-     console.log("i was clicked");
     $("#ruleBox").addClass("noDisplay");
     });
