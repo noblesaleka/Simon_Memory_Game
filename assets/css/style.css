@@ -5,9 +5,17 @@ body {
 }
 
 h1 {
+    padding: 5px;
+    margin: 15px;
+    font-size: 3em;
+}
+
+@media (min-width: 575.98px) { 
+    h1 {
     padding: 10px;
     margin: 30px;
     font-size: 4em;
+}
 }
 
 /*--------------------------------------------Google Fonts*/
@@ -25,13 +33,27 @@ h1 {
 
 .centerNumber {
     text-align: center;
-    line-height:80px;
+    line-height: 50px;
 }
 
 .centerText {
     text-align: center;
-    line-height:30px;
+    line-height: 25px;
 }
+
+@media (min-width: 575.98px) { 
+    .centerNumber {
+    text-align: center;
+    line-height:80px;
+}
+
+    .centerText {
+        text-align: center;
+        line-height:30px;
+    }
+    
+}
+
 
 .left {
      text-align: left;
@@ -240,8 +262,6 @@ h1 {
 
     
 }
-
-
 
 .noDisplay {
     display: none;
