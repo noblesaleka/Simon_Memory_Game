@@ -499,8 +499,8 @@ $("#reset").on("click", function() {
     i = 0;
     k = 1;
     m = 0;
-    $(scorebox).html("<h3>" + "LEVEL" + "</h3>");
-    $(levelCounter).html("<h3>" + "--" + "</h3>");
+    $('#scorebox').html("<h3>" + "LEVEL" + "</h3>");
+    $('#level').html("<h3>" + "--" + "</h3>");
     }
     else {
         console.log("the game is off");

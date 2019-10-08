@@ -6,20 +6,20 @@ If you enjoy a challenge, this game is for you.
  
 ## UX
  
-The Simon game is meant to be an interactive game that uses numbers and colors to challenge the user's memory.
+The Simon game is meant to be an interactive memory game that uses numbers and colors to challenge the user's memory.
 This game is built in the mobile first approach, large numbers and bright inviting colors are implemented
 to make this game visually appealing and easy to play. 
  
+As a user, I want to play a fun memory game on my desktop and mobile device.
+As a user, I want to choose the level of difficulty of the game to challenge myself.
+As a user, I want to be able to start the game over without having to refresh my browser, and play games back to back.
+As a user, I want to see the level that I am on whilst playing the game.
+As a user, I want to be notified when I win or loose the game.
+As a user, I want to be able to turn the sound of the game off and on.
+As a user, I want to have access to the rules of the game.
 
-Use this section to provide insight into your UX process, focusing on who this website is for, 
-what it is that they want to achieve and how your project is the best way to help them achieve 
-these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, 
-with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+INSERT WIREFRAME HERE
 
 ## Features
 
@@ -66,24 +66,18 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+This project was deployed to GitHub.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+It can be accessed via this link: [https://noblesaleka.github.io/Simon_Memory_Game/]
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The text content of this project is original and not sourced from another location.
 
 ### Media
-- The photos used in this site were obtained from ...
+- The sound clips in this project were obtained from soundbible.com
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from the game Simon

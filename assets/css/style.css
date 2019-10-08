@@ -115,17 +115,36 @@ h1 {
 .gameholder {
     border: black solid 5px;
     padding: 10px;
-    width: 400px;
+    width: 300px;
     border-radius: 10%;
 }
 
 .gamebox {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     border-radius: 20%;
     display: inline-block;
     margin-top: 7px;
 }
+
+@media (min-width: 575.98px) { 
+            .gameholder {
+            border: black solid 5px;
+            padding: 10px;
+            width: 400px;
+            border-radius: 10%;
+        }
+        
+        .gamebox {
+            height: 100px;
+            width: 100px;
+            border-radius: 20%;
+            display: inline-block;
+            margin-top: 7px;
+        }
+}
+
+
 
 .gamebox:hover {
     background-color: black;
@@ -185,23 +204,44 @@ h1 {
 }
 
 .settings {
-    position: fixed;
-    top: 40%;
-    left: 35%;
+    position: relative;
+    top: -500px;
+    background: white;
+    border: black solid 5px;
+    width: 300px;
+}
+
+.instructions {
+    position: relative;
+    top: -500px;
+    background: white;
+    border: black solid 5px;
+    width: 300px;
+    text-align: center;
+}
+
+@media (min-width: 575.98px) { 
+    .settings {
+    position: relative;
+    top: -500px;
     background: white;
     border: black solid 5px;
     width: 400px;
 }
 
 .instructions {
-    position: fixed;
-    top: 40%;
-    left: 30%;
+    position: relative;
+    top: -500px;
     background: white;
     border: black solid 5px;
     width: 500px;
     text-align: center;
 }
+
+    
+}
+
+
 
 .noDisplay {
     display: none;
